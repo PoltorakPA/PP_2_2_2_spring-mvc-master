@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Thymeleaf Namespace -->
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<div>
+    <table border="1"align="center">
+        <tr>
+            <th>color</th>
+            <th>model</th>
+            <th>year</th>
+        </tr>
+        <tr th:each="car : ${car}" align="center">
+            <td th:utext="${car.getColor()}">Color</td>
+            <td th:utext="${car.getModel()}">Model</td>
+            <td th:utext="${car.getYear()}">Year</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
